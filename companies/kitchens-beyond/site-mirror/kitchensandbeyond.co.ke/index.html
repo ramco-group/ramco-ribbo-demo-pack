@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kitchens &amp; Beyond | Luxury Kitchens, Bathrooms &amp; Interior Design Kenya.</title>
+  <meta name="description" content="Experience true Italian opulence with Kitchens &amp; Beyond. Discover our luxury kitchens, bespoke bathrooms, tiles, and 3D interior design visualization."/>
+  <meta property="og:title" content="Kitchens &amp; Beyond | Luxury Kitchens, Bathrooms &amp; Interior Design Kenya."/>
+  <meta property="og:description" content="Experience true Italian opulence with Kitchens &amp; Beyond. Discover our luxury kitchens, bespoke bathrooms, tiles, and 3D interior design visualization."/>
+  <meta property="og:type" content="website"/>
+  <link rel="icon" type="image/png" href="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6a54b0d2ea2521a2f630a5ca_Fav_Icon.png"/>
+  <link rel="preconnect" href="#"/>
+  <link rel="preconnect" href="#" crossorigin="anonymous"/>
+  <link href="#" rel="stylesheet"/>
+</head>
+<body>
+
+<style>
+  /* ===== RESET & BASE ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #0a0a0a;
+    color: #f5f0e8;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 600; line-height: 1.2; }
+
+  /* ===== COLOUR TOKENS ===== */
+  :root {
+    --bg-dark:    #0a0a0a;
+    --bg-mid:     #111111;
+    --bg-light:   #1a1a1a;
+    --cream:      #f5f0e8;
+    --gold:       #c9a96e;
+    --gold-light: #e0c48a;
+    --muted:      #888880;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+    padding: 0 48px;
+    height: 76px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .navbar-logo img { height: 44px; width: auto; }
+  .navbar-nav { display: flex; align-items: center; gap: 8px; }
+  .nav-link {
+    color: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    font-weight: 400; letter-spacing: 0.04em; padding: 10px 14px;
+    transition: color 0.2s; white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--gold); }
+
+  /* Dropdown */
+  .dropdown { position: relative; display: inline-block; }
+  .dropdown-toggle {
+    color: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    font-weight: 400; letter-spacing: 0.04em; padding: 10px 14px;
+    cursor: pointer; display: flex; align-items: center; gap: 6px;
+    transition: color 0.2s;
+  }
+  .dropdown-toggle:hover { color: var(--gold); }
+  .dropdown-toggle svg { width: 12px; height: 12px; transition: transform 0.2s; }
+  .dropdown:hover .dropdown-toggle svg { transform: rotate(180deg); }
+  .dropdown-menu {
+    display: none; position: absolute; top: calc(100% + 4px); left: 0;
+    background: #111; border: 1px solid rgba(201,169,110,0.2);
+    min-width: 200px; padding: 8px 0;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+  }
+  .dropdown:hover .dropdown-menu { display: block; }
+  .dropdown-menu a {
+    display: block; padding: 10px 20px; font-size: 13px; color: var(--cream);
+    letter-spacing: 0.03em; transition: background 0.15s, color 0.15s;
+  }
+  .dropdown-menu a:hover { background: rgba(201,169,110,0.08); color: var(--gold); }
+
+  /* Mobile hamburger */
+  .nav-hamburger {
+    display: none; flex-direction: column; gap: 5px; cursor: pointer;
+    padding: 8px;
+  }
+  .nav-hamburger span {
+    display: block; width: 24px; height: 2px; background: var(--cream);
+    transition: all 0.3s;
+  }
+</style>
+
+<style>
+  /* ===== HERO ===== */
+  .hero {
+    position: relative; min-height: 100vh; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding-bottom: 80px;
+  }
+  .hero-image {
+    position: absolute; inset: 0;
+    background-color: #0a0a0a;
+  }
+  .hero-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    opacity: 0.7;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10,10,10,0.3) 0%,
+      rgba(10,10,10,0.1) 40%,
+      rgba(10,10,10,0.7) 75%,
+      rgba(10,10,10,0.95) 100%
+    );
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 80px;
+  }
+  .hero-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(64px, 9vw, 140px);
+    font-weight: 600; line-height: 1.0;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+  }
+  .hero-heading em {
+    font-style: italic; color: var(--gold);
+  }
+  .hero-subtext {
+    margin-top: 24px; font-size: 17px; color: rgba(245,240,232,0.7);
+    font-weight: 300; letter-spacing: 0.02em; max-width: 500px;
+  }
+  .hero-cta {
+    margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold); color: #0a0a0a;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 16px 36px; border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--cream);
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 15px 36px; border: 1px solid rgba(245,240,232,0.4); cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ===== MARQUEE BAND ===== */
+  .marquee-section {
+    background: var(--bg-mid); overflow: hidden;
+    padding: 0; border-top: 1px solid rgba(201,169,110,0.12);
+    border-bottom: 1px solid rgba(201,169,110,0.12);
+  }
+  .marquee-wrapper { overflow: hidden; }
+  .marquee-track {
+    display: flex; width: max-content;
+    animation: marquee-scroll 30s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .marquee-content { display: flex; }
+  .marquee-card {
+    display: flex; align-items: center; justify-content: center;
+    height: 180px; min-width: 280px; position: relative;
+    overflow: hidden; cursor: pointer;
+  }
+  .marquee-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: rgba(10,10,10,0.5); transition: background 0.3s;
+    z-index: 1;
+  }
+  .marquee-card:hover::before { background: rgba(10,10,10,0.2); }
+  .marquee-card img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; transition: transform 0.5s;
+  }
+  .marquee-card:hover img { transform: scale(1.05); }
+  .marquee-card h3 {
+    position: relative; z-index: 2;
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 500;
+    color: var(--cream); letter-spacing: 0.02em; text-align: center;
+    padding: 0 24px;
+  }
+  .marquee-divider {
+    width: 1px; height: 180px; background: rgba(201,169,110,0.2);
+    flex-shrink: 0; align-self: center;
+  }
+</style>
+
+<style>
+  /* ===== ABOUT / INTRO SECTION ===== */
+  .section-about {
+    background: var(--bg-dark); padding: 120px 80px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .about-label {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px; font-weight: 500;
+  }
+  .about-heading {
+    font-size: clamp(36px, 4vw, 56px); color: var(--cream);
+    line-height: 1.15; margin-bottom: 24px;
+  }
+  .about-heading em { font-style: italic; color: var(--gold); }
+  .about-body { font-size: 16px; color: rgba(245,240,232,0.65); line-height: 1.8; margin-bottom: 16px; }
+  .about-stats { display: flex; gap: 48px; margin-top: 40px; }
+  .stat-number {
+    font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 600;
+    color: var(--gold); line-height: 1;
+  }
+  .stat-label { font-size: 13px; color: rgba(245,240,232,0.6); letter-spacing: 0.05em; margin-top: 6px; }
+  .about-image-wrap { position: relative; }
+  .about-image-wrap img { width: 100%; height: 600px; object-fit: cover; }
+  .about-image-badge {
+    position: absolute; bottom: -24px; right: -24px;
+    background: var(--gold); color: #0a0a0a;
+    padding: 24px 32px; font-family: 'Playfair Display', serif;
+    font-size: 14px; font-style: italic; max-width: 200px; text-align: center;
+    line-height: 1.4;
+  }
+
+  /* ===== BRANDS STRIP ===== */
+  .section-brands {
+    background: var(--bg-mid); padding: 64px 80px;
+    text-align: center;
+  }
+  .brands-label {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px; font-weight: 500;
+  }
+  .brands-heading {
+    font-size: 32px; color: var(--cream); margin-bottom: 48px;
+  }
+  .brands-grid {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 0; border: 1px solid rgba(201,169,110,0.12);
+  }
+  .brand-item {
+    flex: 1 1 160px; padding: 32px 24px;
+    border-right: 1px solid rgba(201,169,110,0.12);
+    border-bottom: 1px solid rgba(201,169,110,0.12);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 10px; transition: background 0.2s; cursor: pointer;
+  }
+  .brand-item:last-child { border-right: none; }
+  .brand-item:hover { background: rgba(201,169,110,0.05); }
+  .brand-icon {
+    width: 40px; height: 40px;
+    background: rgba(201,169,110,0.15); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .brand-icon svg { width: 20px; height: 20px; fill: var(--gold); }
+  .brand-name {
+    font-family: 'Playfair Display', serif; font-size: 18px;
+    color: var(--cream); font-weight: 500;
+  }
+  .brand-category {
+    font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* ===== SERVICES SECTION ===== */
+  .section-services {
+    background: var(--bg-light); padding: 120px 80px;
+  }
+  .section-header { text-align: center; margin-bottom: 72px; }
+  .section-label {
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px; font-weight: 500;
+  }
+  .section-heading { font-size: clamp(32px, 4vw, 52px); color: var(--cream); }
+  .section-subtext { margin-top: 16px; font-size: 16px; color: rgba(245,240,232,0.6); max-width: 600px; margin-left: auto; margin-right: auto; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .service-card {
+    position: relative; height: 380px; overflow: hidden; cursor: pointer;
+  }
+  .service-card img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s;
+  }
+  .service-card:hover img { transform: scale(1.06); }
+  .service-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.2) 60%, transparent 100%);
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 32px;
+  }
+  .service-name {
+    font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 500;
+    color: var(--cream);
+  }
+  .service-brand { font-size: 13px; color: var(--gold); letter-spacing: 0.08em; margin-top: 6px; }
+  .service-arrow {
+    margin-top: 12px; display: flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
+    opacity: 0; transform: translateY(8px); transition: all 0.3s;
+  }
+  .service-card:hover .service-arrow { opacity: 1; transform: translateY(0); }
+</style>
+
+<style>
+  /* ===== TESTIMONIALS ===== */
+  .section-testimonials {
+    background: var(--bg-dark); padding: 120px 80px;
+  }
+  .testimonials-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    margin-top: 64px;
+  }
+  .testimonial-card {
+    background: var(--bg-light); padding: 48px 40px;
+    border: 1px solid rgba(201,169,110,0.12);
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .testimonial-card:hover { border-color: rgba(201,169,110,0.4); transform: translateY(-4px); }
+  .quote-mark {
+    position: absolute; top: 32px; right: 36px;
+    font-family: 'Playfair Display', serif; font-size: 80px;
+    color: var(--gold); opacity: 0.25; line-height: 1;
+    font-style: italic; user-select: none;
+  }
+  .testimonial-quote-img { width: 52px; height: auto; margin-bottom: 24px; opacity: 0.8; }
+  .testimonial-text {
+    font-family: 'Playfair Display', serif; font-size: 18px;
+    font-style: italic; color: var(--cream); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .testimonial-divider {
+    width: 40px; height: 1px; background: var(--gold); margin-bottom: 24px;
+  }
+  .testimonial-author { font-size: 15px; font-weight: 600; color: var(--cream); letter-spacing: 0.04em; }
+  .testimonial-role { font-size: 12px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+  .testimonials-cta { margin-top: 56px; text-align: center; }
+
+  /* ===== PORTFOLIO SECTION ===== */
+  .section-portfolio {
+    background: var(--bg-mid); padding: 120px 80px;
+  }
+  .portfolio-grid-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr 1fr;
+    gap: 4px; margin-top: 56px;
+  }
+  .portfolio-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2fr 1fr;
+    gap: 4px; margin-top: 4px;
+  }
+  .portfolio-item {
+    overflow: hidden; position: relative; cursor: pointer;
+    background: var(--bg-light);
+  }
+  .portfolio-item.tall { aspect-ratio: 3/4; }
+  .portfolio-item.wide { aspect-ratio: 4/3; }
+  .portfolio-item.square { aspect-ratio: 1/1; }
+  .portfolio-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s;
+  }
+  .portfolio-item:hover img { transform: scale(1.06); }
+  .portfolio-overlay {
+    position: absolute; inset: 0; background: rgba(10,10,10,0);
+    transition: background 0.3s;
+    display: flex; align-items: flex-end; padding: 24px;
+  }
+  .portfolio-item:hover .portfolio-overlay { background: rgba(10,10,10,0.5); }
+  .portfolio-caption {
+    font-family: 'Playfair Display', serif; font-size: 16px;
+    color: var(--cream); opacity: 0; transform: translateY(8px);
+    transition: all 0.3s;
+  }
+  .portfolio-item:hover .portfolio-caption { opacity: 1; transform: translateY(0); }
+  .portfolio-cta { margin-top: 48px; text-align: center; }
+
+  /* ===== 3D VISUALISATION CALLOUT ===== */
+  .section-3d {
+    background: var(--bg-dark); padding: 120px 80px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .viz-images { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .viz-images img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
+  .viz-images img:first-child { grid-column: 1 / -1; aspect-ratio: 16/9; }
+
+  /* ===== AWARDS STRIP ===== */
+  .section-awards {
+    background: var(--bg-light); padding: 80px;
+    text-align: center;
+  }
+  .awards-grid {
+    display: flex; justify-content: center; gap: 0;
+    flex-wrap: wrap; margin-top: 40px;
+    border: 1px solid rgba(201,169,110,0.12);
+  }
+  .award-item {
+    padding: 32px 40px; flex: 1 1 200px;
+    border-right: 1px solid rgba(201,169,110,0.12);
+  }
+  .award-item:last-child { border-right: none; }
+  .award-year { font-size: 11px; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 8px; }
+  .award-name { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--cream); }
+
+  /* ===== SNAIDERO FEATURE ===== */
+  .section-snaidero {
+    background: var(--bg-dark); padding: 120px 80px;
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center;
+  }
+  .snaidero-image { position: relative; }
+  .snaidero-image img { width: 100%; height: 640px; object-fit: cover; }
+  .snaidero-badge {
+    position: absolute; bottom: 32px; left: -32px;
+    background: var(--bg-mid); border: 1px solid rgba(201,169,110,0.3);
+    padding: 20px 28px; max-width: 220px;
+  }
+  .snaidero-badge-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .snaidero-badge-text { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--cream); line-height: 1.5; }
+</style>
+
+<style>
+  /* ===== BLOG PREVIEW ===== */
+  .section-blog {
+    background: var(--bg-mid); padding: 120px 80px;
+  }
+  .blog-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 56px;
+  }
+  .blog-card { cursor: pointer; }
+  .blog-image {
+    overflow: hidden; aspect-ratio: 16/9; background: var(--bg-light);
+  }
+  .blog-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .blog-card:hover .blog-image img { transform: scale(1.05); }
+  .blog-content { padding: 24px 0; }
+  .blog-tag {
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 12px;
+  }
+  .blog-title {
+    font-family: 'Playfair Display', serif; font-size: 20px;
+    color: var(--cream); line-height: 1.4; margin-bottom: 12px;
+  }
+  .blog-card:hover .blog-title { color: var(--gold); }
+  .blog-excerpt { font-size: 14px; color: rgba(245,240,232,0.6); line-height: 1.7; }
+  .blog-meta { margin-top: 16px; font-size: 12px; color: var(--muted); }
+
+  /* ===== CONTACT CTA ===== */
+  .section-contact-cta {
+    background: var(--bg-dark); padding: 120px 80px; text-align: center;
+  }
+  .cta-heading { font-size: clamp(36px, 5vw, 72px); color: var(--cream); max-width: 800px; margin: 0 auto 24px; }
+  .cta-heading em { font-style: italic; color: var(--gold); }
+  .cta-subtext { font-size: 17px; color: rgba(245,240,232,0.65); margin-bottom: 48px; }
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .contact-divider {
+    width: 80px; height: 1px; background: rgba(201,169,110,0.3); margin: 32px auto 0;
+  }
+  .contact-phone {
+    margin-top: 32px; font-family: 'Playfair Display', serif;
+    font-size: 28px; color: var(--gold); letter-spacing: 0.05em;
+  }
+  .contact-phone a { color: var(--gold); transition: color 0.2s; }
+  .contact-phone a:hover { color: var(--gold-light); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #050505; padding: 80px 80px 0;
+    border-top: 1px solid rgba(201,169,110,0.12);
+  }
+  .footer-inner {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px;
+    padding-bottom: 64px;
+  }
+  .footer-brand img { height: 48px; width: auto; margin-bottom: 24px; }
+  .footer-tagline { font-size: 14px; color: rgba(245,240,232,0.5); line-height: 1.8; max-width: 280px; }
+  .footer-col-title {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 14px; color: rgba(245,240,232,0.6);
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-social { display: flex; flex-direction: column; gap: 12px; }
+  .footer-social a {
+    font-size: 14px; color: rgba(245,240,232,0.6);
+    display: flex; align-items: center; gap: 10px; transition: color 0.2s;
+  }
+  .footer-social a:hover { color: var(--cream); }
+  .footer-divider { border: none; border-top: 1px solid rgba(201,169,110,0.1); }
+  .footer-bottom {
+    display: flex; justify-content: center; align-items: center;
+    padding: 28px 0; font-size: 13px; color: rgba(245,240,232,0.35);
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1100px) {
+    .section-about, .section-3d, .section-snaidero { grid-template-columns: 1fr; }
+    .about-image-badge { right: 0; bottom: -20px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .portfolio-grid-top, .portfolio-grid-bottom { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .navbar { padding: 0 24px; }
+    .navbar-nav { display: none; }
+    .nav-hamburger { display: flex; }
+    .hero-content { padding: 0 24px; }
+    .section-about, .section-brands, .section-services, .section-testimonials,
+    .section-portfolio, .section-3d, .section-awards, .section-snaidero,
+    .section-blog, .section-contact-cta, footer { padding-left: 24px; padding-right: 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .portfolio-grid-top, .portfolio-grid-bottom { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .about-stats { gap: 24px; flex-wrap: wrap; }
+    .brands-grid { flex-direction: column; }
+    .brand-item { border-right: none; }
+    .awards-grid { flex-direction: column; }
+    .award-item { border-right: none; border-bottom: 1px solid rgba(201,169,110,0.12); }
+  }
+</style>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" role="banner">
+  <a href="index.html" class="navbar-logo" aria-label="Kitchens &amp; Beyond Home">
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69a951f46d91f215d28ac930_Logo_White.png"
+         srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69a951f46d91f215d28ac930_Logo_White-p-500.png 500w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69a951f46d91f215d28ac930_Logo_White-p-800.png 800w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69a951f46d91f215d28ac930_Logo_White.png 1312w"
+         sizes="181px" width="181" alt="Kitchens &amp; Beyond logo" loading="eager"/>
+  </a>
+  <nav class="navbar-nav" role="navigation" aria-label="Main navigation">
+    <a href="about-us.html" class="nav-link">About Us</a>
+    <div class="dropdown">
+      <div class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">
+        Brands &amp; Services
+        <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <nav class="dropdown-menu" aria-label="Brands submenu">
+        <a href="#">Snaidero</a>
+        <a href="#">Kohler</a>
+        <a href="#">Novamobili</a>
+        <a href="#">Caesar Ceramiche</a>
+        <a href="#">Ideagroup</a>
+        <a href="#">Azzurra</a>
+        <a href="#">Bosch</a>
+        <a href="#">Franke</a>
+      </nav>
+    </div>
+    <div class="dropdown">
+      <div class="dropdown-toggle" role="button" tabindex="0">
+        Portfolio
+        <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <nav class="dropdown-menu">
+        <a href="#">Commercial</a>
+        <a href="#">Residential</a>
+      </nav>
+    </div>
+    <a href="#" class="nav-link">Blog</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+  <div class="nav-hamburger" role="button" aria-label="Open menu" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-image">
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f560bf88f0311fd6930a8_Image.png"
+         srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f560bf88f0311fd6930a8_Image-p-500.png 500w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f560bf88f0311fd6930a8_Image-p-800.png 800w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f560bf88f0311fd6930a8_Image-p-1080.png 1080w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f560bf88f0311fd6930a8_Image-p-1600.png 1600w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f560bf88f0311fd6930a8_Image.png 1728w"
+         sizes="100vw" alt="Luxury kitchen interior" loading="eager"/>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-heading">Crafting<br/><em>Excellence</em></h1>
+    <p class="hero-subtext">Kenya's premier destination for luxury kitchens, bespoke bathrooms, and world-class interior design.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">Book a Consultation</a>
+      <a href="#portfolio" class="btn-outline">View Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE BAND ===== -->
+<section class="marquee-section" aria-label="Our services">
+  <div class="marquee-wrapper">
+    <div class="marquee-track" aria-hidden="true">
+      <!-- First set -->
+      <div class="marquee-content">
+        <a href="#" class="marquee-card" style="background:#0f0f0f;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f7e0979916125fded08a5_Image.png" alt="Kitchens"/>
+          <h3>Kitchens</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#111;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6b1cb94181187df1b2_Bathroom.png" alt="Bathrooms"/>
+          <h3>Bathrooms</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#0f0f0f;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6b226bf33e8b8a22f4_Tiles.png" alt="Tiles"/>
+          <h3>Tiles</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#111;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6a0fbac2ab50944bce_Wardrobes.png" alt="Wardrobes"/>
+          <h3>Wardrobes</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#0f0f0f;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/697b31a0261e0befb7ac258b_vanities.png" alt="Vanities"/>
+          <h3>Vanities</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#111; min-width:380px;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f8384e45937721526be50_Image.png" alt="Interior Design &amp; 3D Visualisation"/>
+          <h3>Interior Design &amp; 3D Visualisation</h3>
+        </a>
+        <div class="marquee-divider"></div>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-content">
+        <a href="#" class="marquee-card" style="background:#0f0f0f;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f7e0979916125fded08a5_Image.png" alt="Kitchens"/>
+          <h3>Kitchens</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#111;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6b1cb94181187df1b2_Bathroom.png" alt="Bathrooms"/>
+          <h3>Bathrooms</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#0f0f0f;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6b226bf33e8b8a22f4_Tiles.png" alt="Tiles"/>
+          <h3>Tiles</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#111;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6a0fbac2ab50944bce_Wardrobes.png" alt="Wardrobes"/>
+          <h3>Wardrobes</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#0f0f0f;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/697b31a0261e0befb7ac258b_vanities.png" alt="Vanities"/>
+          <h3>Vanities</h3>
+        </a>
+        <div class="marquee-divider"></div>
+        <a href="#" class="marquee-card" style="background:#111; min-width:380px;">
+          <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696f8384e45937721526be50_Image.png" alt="Interior Design &amp; 3D Visualisation"/>
+          <h3>Interior Design &amp; 3D Visualisation</h3>
+        </a>
+        <div class="marquee-divider"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="section-about">
+  <div class="about-text">
+    <div class="about-label">Our Story</div>
+    <h2 class="about-heading">Over 13 Years of<br/><em>Italian Opulence</em><br/>in Kenya</h2>
+    <p class="about-body">Kitchens &amp; Beyond is Kenya's premier one-stop shop for luxury interior solutions — kitchens, wardrobes, sanitaryware, tiles, vanities and 3D interior design. Part of the Ramco Group, with roots going back to 1948.</p>
+    <p class="about-body">We began with a single ambition: to introduce modular kitchens to the Kenyan market through our founding partnership with Italian brand Snaidero. That success prompted a broader vision — to become a genuine one-stop shop for interior solutions.</p>
+    <div class="about-stats">
+      <div>
+        <div class="stat-number">13+</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div>
+        <div class="stat-number">8</div>
+        <div class="stat-label">Global Brands</div>
+      </div>
+      <div>
+        <div class="stat-number">10yr</div>
+        <div class="stat-label">Minimum Warranty</div>
+      </div>
+    </div>
+    <div style="margin-top:40px;">
+      <a href="about-us.html" class="btn-outline">Discover Our Story</a>
+    </div>
+  </div>
+  <div class="about-image-wrap">
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi.jpg"
+         srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi-p-500.jpg 500w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi-p-800.jpg 800w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi-p-1080.jpg 1080w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi.jpg 1600w"
+         sizes="(max-width:1100px) 100vw, 50vw"
+         alt="Snaidero luxury kitchen" loading="lazy"/>
+    <div class="about-image-badge">
+      Superbrands Kenya<br/>2021 – 2022
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRANDS SECTION ===== -->
+<section class="section-brands">
+  <div class="brands-label">Our Partners</div>
+  <h2 class="brands-heading">World-Class Brands,<br/>Curated for You</h2>
+  <div class="brands-grid">
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7z"/></svg></div>
+      <div class="brand-name">Snaidero</div>
+      <div class="brand-category">Italian Kitchens</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+      <div class="brand-name">Kohler</div>
+      <div class="brand-category">Sanitaryware</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><rect x="7" y="7" width="10" height="10"/></svg></div>
+      <div class="brand-name">Novamobili</div>
+      <div class="brand-category">Wardrobes</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9"/></svg></div>
+      <div class="brand-name">Caesar</div>
+      <div class="brand-category">Porcelain Tiles</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></div>
+      <div class="brand-name">Ideagroup</div>
+      <div class="brand-category">Vanities</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+      <div class="brand-name">Azzurra</div>
+      <div class="brand-category">Vanities</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg></div>
+      <div class="brand-name">Bosch</div>
+      <div class="brand-category">Built-in Appliances</div>
+    </div>
+    <div class="brand-item">
+      <div class="brand-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="brand-name">Franke</div>
+      <div class="brand-category">Sinks &amp; Faucets</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section class="section-services">
+  <div class="section-header">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-heading">Complete Interior Solutions</h2>
+    <p class="section-subtext">From concept to completion — every product in our range carries a minimum ten-year warranty.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857652a9bb4050d29999d_way_eurocucina_2024_02-1.jpeg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857652a9bb4050d29999d_way_eurocucina_2024_02-1-p-500.jpeg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857652a9bb4050d29999d_way_eurocucina_2024_02-1-p-800.jpeg 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857652a9bb4050d29999d_way_eurocucina_2024_02-1.jpeg 1600w"
+           sizes="33vw" alt="Luxury Italian kitchen" loading="lazy"/>
+      <div class="service-overlay">
+        <div>
+          <div class="service-name">Kitchens</div>
+          <div class="service-brand">Snaidero · Italy</div>
+          <div class="service-arrow">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698f12642b4372770333ff6d_Shower.png"
+           alt="Luxury bathroom" loading="lazy"/>
+      <div class="service-overlay">
+        <div>
+          <div class="service-name">Bathrooms</div>
+          <div class="service-brand">Kohler · USA</div>
+          <div class="service-arrow">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6b226bf33e8b8a22f4_Tiles.png"
+           alt="Premium tiles" loading="lazy"/>
+      <div class="service-overlay">
+        <div>
+          <div class="service-name">Tiles</div>
+          <div class="service-brand">Caesar · Italy</div>
+          <div class="service-arrow">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6970dc6a0fbac2ab50944bce_Wardrobes.png"
+           alt="Bespoke wardrobes" loading="lazy"/>
+      <div class="service-overlay">
+        <div>
+          <div class="service-name">Wardrobes</div>
+          <div class="service-brand">Novamobili · Italy</div>
+          <div class="service-arrow">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/697b31a0261e0befb7ac258b_vanities.png"
+           alt="Luxury vanities" loading="lazy"/>
+      <div class="service-overlay">
+        <div>
+          <div class="service-name">Vanities</div>
+          <div class="service-brand">Ideagroup · Azzurra</div>
+          <div class="service-arrow">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="service-card">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698c2b4c934de7868c3ac5db_House 3.png"
+           alt="3D interior design visualisation" loading="lazy"/>
+      <div class="service-overlay">
+        <div>
+          <div class="service-name">Interior Design &amp; 3D Visualisation</div>
+          <div class="service-brand">In-House Design Team</div>
+          <div class="service-arrow">Explore <span>→</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section-testimonials" id="testimonials">
+  <div class="section-header">
+    <div class="section-label">Client Stories</div>
+    <h2 class="section-heading">Who's Saying What?</h2>
+    <p class="section-subtext">Hear from some of our satisfied clients.</p>
+  </div>
+  <div class="testimonials-grid">
+
+    <article class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <img class="testimonial-quote-img"
+           src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz.png"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz-p-500.png 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz.png 849w"
+           sizes="52px" width="52" alt="Quote mark" loading="lazy"/>
+      <p class="testimonial-text">Kitchens &amp; Beyond holds your hand and travels the whole kitchen design journey with you. The result is a stunning kitchen!</p>
+      <div class="testimonial-divider"></div>
+      <div class="testimonial-author">Rajen &amp; Parool</div>
+      <div class="testimonial-role">Interior Design Client</div>
+    </article>
+
+    <article class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <img class="testimonial-quote-img"
+           src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz.png"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz-p-500.png 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz.png 849w"
+           sizes="52px" width="52" alt="Quote mark" loading="lazy"/>
+      <p class="testimonial-text">The final output is: We trust that you deliver on what you promise. A year later and everything is still working perfectly.</p>
+      <div class="testimonial-divider"></div>
+      <div class="testimonial-author">Steve &amp; Evelyn</div>
+      <div class="testimonial-role">Kitchen Client</div>
+    </article>
+
+    <article class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <img class="testimonial-quote-img"
+           src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz.png"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz-p-500.png 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51bed0d0447b23e6f8884_Quoteezzz.png 849w"
+           sizes="52px" width="52" alt="Quote mark" loading="lazy"/>
+      <p class="testimonial-text">One of the best brands of kitchens on the planet. True taste of Italian opulence. Quality, elegance &amp; style.</p>
+      <div class="testimonial-divider"></div>
+      <div class="testimonial-author">Mercy</div>
+      <div class="testimonial-role">Kitchen Client</div>
+    </article>
+
+  </div>
+  <div class="testimonials-cta">
+    <a href="#" class="btn-outline" style="margin-right:16px;">See More Reviews</a>
+    <a href="#contact" class="btn-primary">Book a Consultation</a>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO SECTION ===== -->
+<section class="section-portfolio" id="portfolio">
+  <div class="section-header">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-heading">Our Project Portfolio</h2>
+    <p class="section-subtext">Commercial and residential projects across Kenya and East Africa.</p>
+  </div>
+
+  <div class="portfolio-grid-top">
+    <div class="portfolio-item tall">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f1eb28168158437bd6fd_The-Marquis-4.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f1eb28168158437bd6fd_The-Marquis-4-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f1eb28168158437bd6fd_The-Marquis-4.jpg 737w"
+           sizes="25vw" alt="The Marquis apartments" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">The Marquis</span></div>
+    </div>
+    <div class="portfolio-item wide">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982eb55ffa930600d353428_GTC_Centre_render_triad.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982eb55ffa930600d353428_GTC_Centre_render_triad-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982eb55ffa930600d353428_GTC_Centre_render_triad-p-800.jpg 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982eb55ffa930600d353428_GTC_Centre_render_triad.jpg 959w"
+           sizes="50vw" alt="GTC Avic Centre" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">GTC Avic Centre</span></div>
+    </div>
+    <div class="portfolio-item wide">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3a88c4bf7decb8f7a7f_4a7193_bf8c89c204ec41a886422492596ae1e7~mv2.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3a88c4bf7decb8f7a7f_4a7193_bf8c89c204ec41a886422492596ae1e7~mv2-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3a88c4bf7decb8f7a7f_4a7193_bf8c89c204ec41a886422492596ae1e7~mv2-p-800.jpg 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3a88c4bf7decb8f7a7f_4a7193_bf8c89c204ec41a886422492596ae1e7~mv2.jpg 2500w"
+           sizes="37.5vw" alt="Enaki Town" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">Enaki Town</span></div>
+    </div>
+    <div class="portfolio-item tall">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ebc7ba427562449a1891_a-view-of-one-of-the-tents-at-JW-Marriott-Masai-Mara-Lodge-at-night-819x1024.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ebc7ba427562449a1891_a-view-of-one-of-the-tents-at-JW-Marriott-Masai-Mara-Lodge-at-night-819x1024-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ebc7ba427562449a1891_a-view-of-one-of-the-tents-at-JW-Marriott-Masai-Mara-Lodge-at-night-819x1024.jpg 819w"
+           sizes="25vw" alt="JW Marriott Masai Mara" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">JW Marriott Masai Mara</span></div>
+    </div>
+  </div>
+
+  <div class="portfolio-grid-bottom">
+    <div class="portfolio-item tall">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3436aa7dfa827b6cc90_01_77-Tinderet_Exterior-1-1-1.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3436aa7dfa827b6cc90_01_77-Tinderet_Exterior-1-1-1-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3436aa7dfa827b6cc90_01_77-Tinderet_Exterior-1-1-1-p-800.jpg 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982f3436aa7dfa827b6cc90_01_77-Tinderet_Exterior-1-1-1.jpg 1500w"
+           sizes="25vw" alt="77 Tinderet" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">77 Tinderet</span></div>
+    </div>
+    <div class="portfolio-item wide">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ed5a8213c9650e1a4801_03_Exterior_O.webp"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ed5a8213c9650e1a4801_03_Exterior_O-p-500.webp 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ed5a8213c9650e1a4801_03_Exterior_O-p-800.webp 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/6982ed5a8213c9650e1a4801_03_Exterior_O.webp 1200w"
+           sizes="37.5vw" alt="Tribe Hotel" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">Tribe Hotel</span></div>
+    </div>
+    <div class="portfolio-item wide">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51dd786bba992b5f118ea_render-of-the-ritz-carlton-masai-mara-safari-camp-header-1.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51dd786bba992b5f118ea_render-of-the-ritz-carlton-masai-mara-safari-camp-header-1-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51dd786bba992b5f118ea_render-of-the-ritz-carlton-masai-mara-safari-camp-header-1-p-800.jpg 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69b51dd786bba992b5f118ea_render-of-the-ritz-carlton-masai-mara-safari-camp-header-1.jpg 1328w"
+           sizes="50vw" alt="The Ritz-Carlton Masai Mara" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">Ritz-Carlton Masai Mara</span></div>
+    </div>
+    <div class="portfolio-item tall">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69aaebe81b7097e70d5a0ab0_the_ritz-carlton-masai_mara_safari_camp-exterior_73d54_thumb.jpg"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/69aaebe81b7097e70d5a0ab0_the_ritz-carlton-masai_mara_safari_camp-exterior_73d54_thumb-p-500.jpg 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/69aaebe81b7097e70d5a0ab0_the_ritz-carlton-masai_mara_safari_camp-exterior_73d54_thumb.jpg 1280w"
+           sizes="25vw" alt="Ritz-Carlton Masai Mara exterior" loading="lazy"/>
+      <div class="portfolio-overlay"><span class="portfolio-caption">Ritz-Carlton Exterior</span></div>
+    </div>
+  </div>
+
+  <div class="portfolio-cta">
+    <a href="#" class="btn-primary">View All Projects</a>
+  </div>
+</section>
+
+<!-- ===== SNAIDERO FEATURE ===== -->
+<section class="section-snaidero">
+  <div class="snaidero-image">
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi.jpg"
+         srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi-p-500.jpg 500w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi-p-1080.jpg 1080w,
+                 ../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857753714ed215572b1f1_Snaidero_Elementi.jpg 1600w"
+         sizes="(max-width:1100px) 100vw, 55vw"
+         alt="Snaidero Elementi kitchen" loading="lazy"/>
+    <div class="snaidero-badge">
+      <div class="snaidero-badge-label">Founding Partner</div>
+      <div class="snaidero-badge-text">Italy's most awarded kitchen brand, now in Kenya.</div>
+    </div>
+  </div>
+  <div>
+    <div class="about-label">Featured Brand</div>
+    <h2 class="about-heading" style="font-size:clamp(32px,3.5vw,52px);">Snaidero<br/><em>Italian Kitchens</em></h2>
+    <p class="about-body" style="margin-top:20px;">Snaidero is the Italian kitchen brand that started it all for Kitchens &amp; Beyond. With over 70 years of craftsmanship, Snaidero brings the true taste of Italian opulence — precision engineering meets timeless design.</p>
+    <p class="about-body">Each kitchen is bespoke, modular, and built to the exact specifications of your space. Our in-house design team handles the entire journey from first sketch to final installation.</p>
+    <ul style="margin-top:20px; list-style:none; display:flex; flex-direction:column; gap:12px;">
+      <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:rgba(245,240,232,0.7);">
+        <span style="color:var(--gold); font-size:18px; line-height:1.4;">✓</span>
+        Made-to-measure modular design
+      </li>
+      <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:rgba(245,240,232,0.7);">
+        <span style="color:var(--gold); font-size:18px; line-height:1.4;">✓</span>
+        Minimum 10-year product warranty
+      </li>
+      <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:rgba(245,240,232,0.7);">
+        <span style="color:var(--gold); font-size:18px; line-height:1.4;">✓</span>
+        3D visualisation before you commit
+      </li>
+      <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:rgba(245,240,232,0.7);">
+        <span style="color:var(--gold); font-size:18px; line-height:1.4;">✓</span>
+        Full installation by our expert team
+      </li>
+    </ul>
+    <div style="margin-top:40px;">
+      <a href="#" class="btn-primary" style="margin-right:16px;">Explore Snaidero</a>
+      <a href="#contact" class="btn-outline">Book Showroom Visit</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AWARDS ===== -->
+<section class="section-awards">
+  <div class="section-label">Recognition</div>
+  <h2 class="section-heading" style="font-size:36px;">Award-Winning Excellence</h2>
+  <div class="awards-grid">
+    <div class="award-item">
+      <div class="award-year">2018</div>
+      <div class="award-name">Kohler Highest Growth Award</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2020–2022</div>
+      <div class="award-name">Superbrands Kenya</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2024</div>
+      <div class="award-name">Kohler Highest Growth Award</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2025</div>
+      <div class="award-name">Kohler 10 Year Partnership</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3D VISUALISATION ===== -->
+<section class="section-3d">
+  <div>
+    <div class="about-label">Design Service</div>
+    <h2 class="about-heading" style="font-size:clamp(32px,3.5vw,52px);">See Your Space<br/><em>Before You Build</em></h2>
+    <p class="about-body" style="margin-top:20px;">Our in-house interior design team creates photorealistic 3D visualisations of your kitchen, bathroom or wardrobe — so you can see the finished result before committing to a single material or fitting.</p>
+    <p class="about-body">It removes the anxiety from a major investment and gives our designers something to work with from the very first conversation.</p>
+    <div style="margin-top:40px;">
+      <a href="#contact" class="btn-primary">Start Your Design Journey</a>
+    </div>
+  </div>
+  <div class="viz-images">
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698c55d43caf280d56c0b222_Screenshot 2026-02-11 130534.png"
+         alt="3D kitchen visualisation" loading="lazy"/>
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698c5675188c3fb591cabd70_Screenshot 2026-02-11 130604.png"
+         alt="3D bathroom visualisation" loading="lazy"/>
+    <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698c569d9236ed1e5a934b37_Screenshot 2026-02-11 130515.png"
+         alt="3D interior visualisation" loading="lazy"/>
+  </div>
+</section>
+
+<!-- ===== BLOG PREVIEW ===== -->
+<section class="section-blog">
+  <div class="section-header">
+    <div class="section-label">Insights &amp; Inspiration</div>
+    <h2 class="section-heading">From Our Blog</h2>
+  </div>
+  <div class="blog-grid">
+    <article class="blog-card">
+      <div class="blog-image">
+        <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/699857652a9bb4050d29999d_way_eurocucina_2024_02-1.jpeg"
+             alt="Eurocucina 2024 kitchen trends" loading="lazy"/>
+      </div>
+      <div class="blog-content">
+        <div class="blog-tag">Kitchens · Design Trends</div>
+        <h3 class="blog-title">What Eurocucina 2024 Tells Us About the Future of Kitchen Design</h3>
+        <p class="blog-excerpt">The world's leading kitchen fair in Milan set the direction for the next five years. Here's what we took home.</p>
+        <div class="blog-meta">June 2024</div>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-image">
+        <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698f13bb6f253bbaf3c6253a_Toilet Kohler.png"
+             alt="Kohler bathroom design" loading="lazy"/>
+      </div>
+      <div class="blog-content">
+        <div class="blog-tag">Bathrooms · Kohler</div>
+        <h3 class="blog-title">Why Kohler Remains the Gold Standard for Luxury Sanitaryware in Kenya</h3>
+        <p class="blog-excerpt">From award-winning designs to uncompromising engineering — a closer look at why Kohler leads the market.</p>
+        <div class="blog-meta">April 2024</div>
+      </div>
+    </article>
+    <article class="blog-card">
+      <div class="blog-image">
+        <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/698c2b4c934de7868c3ac5db_House 3.png"
+             alt="3D interior design process" loading="lazy"/>
+      </div>
+      <div class="blog-content">
+        <div class="blog-tag">Design Process · 3D Visualisation</div>
+        <h3 class="blog-title">How 3D Visualisation Changes the Way We Design Luxury Interiors</h3>
+        <p class="blog-excerpt">Seeing your space before a single tile is laid removes uncertainty and unlocks better decisions. Here's how it works.</p>
+        <div class="blog-meta">February 2024</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== CONTACT CTA ===== -->
+<section class="section-contact-cta" id="contact">
+  <div class="section-label">Get in Touch</div>
+  <h2 class="cta-heading">Ready to Create<br/>Something <em>Extraordinary?</em></h2>
+  <p class="cta-subtext">Visit our one-of-a-kind lifestyle showroom at The Promenade, General Mathenge Drive, Nairobi.</p>
+  <div class="cta-buttons">
+    <a href="tel:+254707222999" class="btn-primary">Call Us Now</a>
+    <a href="#" class="btn-outline">Book a Showroom Visit</a>
+  </div>
+  <div class="contact-divider"></div>
+  <div class="contact-phone">
+    <a href="tel:+254707222999">+254 707 222 999</a>
+  </div>
+  <p style="margin-top:16px; font-size:14px; color:rgba(245,240,232,0.45); letter-spacing:0.05em;">
+    The Promenade · General Mathenge Drive · Nairobi, Kenya
+  </p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696e3530f166265d8670f88a_Knb.png"
+           srcset="../cdn.prod.website-files.com/696e3224f580993f81a6c615/696e3530f166265d8670f88a_Knb-p-500.png 500w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/696e3530f166265d8670f88a_Knb-p-800.png 800w,
+                   ../cdn.prod.website-files.com/696e3224f580993f81a6c615/696e3530f166265d8670f88a_Knb.png 1312w"
+           sizes="(max-width:479px) 100vw, 290px" width="290" alt="Kitchens &amp; Beyond" loading="lazy"/>
+      <p class="footer-tagline">Kenya's premier one-stop shop for luxury interior solutions. Part of the Ramco Group.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <nav class="footer-links">
+        <a href="about-us.html">About Us</a>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-title">Social Media</div>
+      <div class="footer-social">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.01a8.16 8.16 0 004.77 1.52V7.07a4.85 4.85 0 01-1-.38z"/></svg>
+          TikTok
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact Us</div>
+      <nav class="footer-links">
+        <a href="tel:+254707222999">+254 707 222 999</a>
+        <a href="#">The Promenade</a>
+        <a href="#">General Mathenge Drive</a>
+        <a href="#">Nairobi, Kenya</a>
+      </nav>
+    </div>
+  </div>
+  <hr class="footer-divider"/>
+  <div class="footer-bottom">
+    Copyright &copy; 2026 Kitchens &amp; Beyond
+  </div>
+</footer>
+
+<!-- ===== RIBBO WIDGET ===== -->
+<script>!function(){let t=document.createElement("script");t.id="ribbo-widget",t.type="text/javascript",t.async=!0,t.src="https://staging.ribbo.ai/api/embed/application/widget",t.dataset.ribboWidgetApplicationId="IkR4UILxxNdJhbzG3Jcs",document.body.append(t),window.Ribbo||(window.Ribbo={updateUser(t){window._Ribbo_updateUser=()=>t}})}();</script>
+
+</body>
+</html>
